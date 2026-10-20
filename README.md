@@ -1,6 +1,6 @@
-# CSV Intact
+# CSV to XLSX Converter
 
-CSV・TSVファイルを、文字化けさせず、値を勝手に変えさせずにMicrosoft Excelで開くためのMacアプリです。元のファイルは変更しません。名前の「Intact」は「元のまま」という意味です。
+CSV・TSVファイルを、文字化けさせず、値を勝手に変えさせずにMicrosoft Excelで開くためのMacアプリです。元のファイルは変更しません。
 
 Shift_JISのCSVがExcelで文字化けする、先頭の0が消える、JANコードが「4.90123E+12」になる、「1-2」が「1月2日」になる、といった問題を避けるために作りました。CSVを読み込んで、セルを「文字列」「数値」「日付」の正しい型にしたExcelブック（.xlsx）を作り、Excelで開きます。
 
@@ -25,12 +25,12 @@ Shift_JISのCSVがExcelで文字化けする、先頭の0が消える、JANコ�
 
 ## ダウンロード
 
-ビルド済みのアプリは [Releases](https://github.com/moriyakeiichi/csv-intact/releases) にあります。
+ビルド済みのアプリは [Releases](https://github.com/moriyakeiichi/csv-to-xlsx-converter/releases) にあります。
 
-1. 最新版の `CSV-Intact-<版>.zip` をダウンロードして開きます。「CSV Intact <版>」フォルダの中に、アプリ、はじめに.txt、LICENSE が入っています。
-2. 「CSV Intact.app」をアプリケーションフォルダに移します。
+1. 最新版の `CSV-to-XLSX-Converter-<版>.zip` をダウンロードして開きます。「CSV to XLSX Converter <版>」フォルダの中に、アプリ、はじめに.txt、LICENSE が入っています。
+2. 「CSV to XLSX Converter.app」をアプリケーションフォルダに移します。
 3. 初めて起動するときだけ、次の手順が必要です。このアプリはAppleの公証を受けていないため、macOSが起動を止めます。
-   1. 「CSV Intact」をダブルクリックします。警告が表示されたら「完了」をクリックします（「ゴミ箱に入れる」は選ばないでください）。
+   1. 「CSV to XLSX Converter」をダブルクリックします。警告が表示されたら「完了」をクリックします（「ゴミ箱に入れる」は選ばないでください）。
    2. アップルメニューの「システム設定」を開き、サイドバーの「プライバシーとセキュリティ」をクリックします。
    3. 右側を下にスクロールし、「セキュリティ」の項目に表示される「このまま開く」（表示によっては「開く」）をクリックします。このボタンは、起動を試してから約1時間だけ表示されます。
    4. 確認が表示されたら「このまま開く」をクリックし、ログインパスワードを入力して「OK」をクリックします。
@@ -40,7 +40,7 @@ Shift_JISのCSVがExcelで文字化けする、先頭の0が消える、JANコ�
 ダウンロードしたZIPが改ざんされていないかは、リリースのページに記載したSHA-256と、ターミナルで次のコマンドを実行した結果が一致するかで確かめられます。
 
 ```
-shasum -a 256 ~/Downloads/CSV-Intact-1.0.0.zip
+shasum -a 256 ~/Downloads/CSV-to-XLSX-Converter-1.0.0.zip
 ```
 
 ## ソースからビルド
@@ -56,25 +56,25 @@ shasum -a 256 ~/Downloads/CSV-Intact-1.0.0.zip
 2. このリポジトリを取得します（「Code」ボタンの「Download ZIP」でもかまいません）。
 
    ```
-   git clone https://github.com/moriyakeiichi/csv-intact.git
+   git clone https://github.com/moriyakeiichi/csv-to-xlsx-converter.git
    ```
 
 3. ターミナルでフォルダに移動して、ビルドします。
 
    ```
-   cd csv-intact
+   cd csv-to-xlsx-converter
    bash build.sh
    ```
 
    Finderで「ビルド.command」をダブルクリックしても同じです。ただし、ZIPでダウンロードした場合は、macOSのセキュリティ確認でダブルクリックが止められることがあります。そのときはターミナルで実行してください。
 
-4. フォルダに「CSV Intact.app」ができます。アプリケーションフォルダに移して使ってください。
+4. フォルダに「CSV to XLSX Converter.app」ができます。アプリケーションフォルダに移して使ってください。
 
 ビルドでは、最初に変換エンジンの自動テストを実行し、合格した場合だけアプリを作ります。配布用のZIPも `dist/` に作ります。経過は `build.log` に記録されます。
 
 ## 使い方
 
-1. 「CSV Intact」を起動します。
+1. 「CSV to XLSX Converter」を起動します。
 2. CSVファイルをウインドウにドロップするか、「ファイルを選択…」で選びます。
 3. 変換したファイルが保存され、Excelで開きます。
 
@@ -122,4 +122,4 @@ CP932・EUC-JPの文字コード表は、Python標準のコーデックから `T
 
 ## 商標について
 
-Microsoft Excel は、米国 Microsoft Corporation の米国およびその他の国における登録商標または商標です。CSV Intact は Microsoft Corporation とは関係のない個人のプロジェクトです。
+Microsoft Excel は、米国 Microsoft Corporation の米国およびその他の国における登録商標または商標です。CSV to XLSX Converter は Microsoft Corporation とは関係のない個人のプロジェクトです。

@@ -5,13 +5,13 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>ja</string>
 	<key>CFBundleDisplayName</key>
-	<string>CSV Intact</string>
+	<string>CSV to XLSX Converter</string>
 	<key>CFBundleName</key>
-	<string>CSV Intact</string>
+	<string>CSV to XLSX Converter</string>
 	<key>CFBundleExecutable</key>
-	<string>CSVIntact</string>
+	<string>CSVtoXLSXConverter</string>
 	<key>CFBundleIdentifier</key>
-	<string>io.github.moriyakeiichi.csv-intact</string>
+	<string>io.github.moriyakeiichi.csv-to-xlsx-converter</string>
 	<key>CFBundleIconFile</key>
 	<string>AppIcon</string>
 	<key>CFBundlePackageType</key>

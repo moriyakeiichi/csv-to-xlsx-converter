@@ -2,7 +2,7 @@ import AppKit
 
 @main
 @MainActor
-struct CSVIntactApp {
+struct CSVtoXLSXConverterApp {
     static func main() {
         let application = NSApplication.shared
         let delegate = AppDelegate()
