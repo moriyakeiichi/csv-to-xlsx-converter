@@ -1,0 +1,4 @@
+# 文字コード表・テスト用データ・見本CSVはバイト単位で比較するため、改行コードを変換させない
+*.bin binary
+Tests/Fixtures/* binary
+テスト用CSV/* binary

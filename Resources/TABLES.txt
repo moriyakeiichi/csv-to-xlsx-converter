@@ -1,0 +1,2 @@
+cp932.bin / eucjp.bin / eucjp3.bin
+Python 3.13.16 の cp932・euc_jp コーデックから Tools/make_tables.py で生成。

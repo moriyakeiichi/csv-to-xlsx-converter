@@ -1,0 +1,13 @@
+# ビルドで作られるもの
+*.app/
+build.log
+
+# 変換で作られるもの（見本CSVの変換結果など）
+*_excel.xlsx
+*_excel.csv
+*_excel [0-9]*.xlsx
+*_excel [0-9]*.csv
+~$*
+
+# macOS
+.DS_Store
