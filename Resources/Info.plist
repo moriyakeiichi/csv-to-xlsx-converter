@@ -5,13 +5,13 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>ja</string>
 	<key>CFBundleDisplayName</key>
-	<string>CSV Excel Viewer</string>
+	<string>CSV Intact</string>
 	<key>CFBundleName</key>
-	<string>CSV Excel Viewer</string>
+	<string>CSV Intact</string>
 	<key>CFBundleExecutable</key>
-	<string>CSVExcelViewer</string>
+	<string>CSVIntact</string>
 	<key>CFBundleIdentifier</key>
-	<string>io.github.moriyakeiichi.csv-excel-viewer</string>
+	<string>io.github.moriyakeiichi.csv-intact</string>
 	<key>CFBundleIconFile</key>
 	<string>AppIcon</string>
 	<key>CFBundlePackageType</key>

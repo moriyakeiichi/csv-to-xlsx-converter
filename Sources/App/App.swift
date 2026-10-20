@@ -2,7 +2,7 @@ import AppKit
 
 @main
 @MainActor
-struct CSVExcelViewerApp {
+struct CSVIntactApp {
     static func main() {
         let application = NSApplication.shared
         let delegate = AppDelegate()

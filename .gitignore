@@ -1,6 +1,7 @@
 # ビルドで作られるもの
 *.app/
 build.log
+dist/
 
 # 変換で作られるもの（見本CSVの変換結果など）
 *_excel.xlsx

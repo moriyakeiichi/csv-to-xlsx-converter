@@ -112,7 +112,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             guard let resources = Bundle.main.resourceURL else { throw ConversionError("アプリのリソースが見つかりません。") }
             let tables = try LegacyTables(directory: resources)
             let downloads = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first
-            converter = Converter(tables: tables, fallbackDirectory: downloads?.appendingPathComponent("CSV Excel Viewer"))
+            converter = Converter(tables: tables, fallbackDirectory: downloads?.appendingPathComponent("CSV Intact"))
         } catch {
             selectButton.isEnabled = false
             statusLabel.stringValue = error.localizedDescription
@@ -140,11 +140,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
         let appItem = NSMenuItem()
         let appMenu = NSMenu()
-        appMenu.addItem(withTitle: "CSV Excel Viewerについて", action: #selector(showAbout), keyEquivalent: "")
+        appMenu.addItem(withTitle: "CSV Intactについて", action: #selector(showAbout), keyEquivalent: "")
         appMenu.addItem(.separator())
-        appMenu.addItem(withTitle: "CSV Excel Viewerを隠す", action: #selector(NSApplication.hide(_:)), keyEquivalent: "h")
+        appMenu.addItem(withTitle: "CSV Intactを隠す", action: #selector(NSApplication.hide(_:)), keyEquivalent: "h")
         appMenu.addItem(.separator())
-        appMenu.addItem(withTitle: "CSV Excel Viewerを終了", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
+        appMenu.addItem(withTitle: "CSV Intactを終了", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
         appItem.submenu = appMenu
         main.addItem(appItem)
 
@@ -198,7 +198,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 640, height: 700),
                           styleMask: [.titled, .closable, .miniaturizable, .resizable],
                           backing: .buffered, defer: false)
-        window.title = "CSV Excel Viewer"
+        window.title = "CSV Intact"
         window.minSize = NSSize(width: 560, height: 620)
         window.isReleasedWhenClosed = false
         window.center()
@@ -363,7 +363,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     @objc private func showAbout() {
         let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "?"
         let alert = NSAlert()
-        alert.messageText = "CSV Excel Viewer \(version)"
+        alert.messageText = "CSV Intact \(version)"
         alert.informativeText = "CSV・TSVファイルを文字化けや数値の自動変換なしでExcelに渡すアプリです。変換の規則は同梱の「はじめに.txt」をご覧ください。"
         alert.runModal()
     }
